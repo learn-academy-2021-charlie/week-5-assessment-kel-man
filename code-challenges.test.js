@@ -41,7 +41,7 @@ describe('codifier', () => {
  * this is nonperformant. An alternate approach would be to create a recursive function that uses String.prototype.replace() to replace the letters
  * one at a time, and ending when the output of str.replace is equal to the input of the function on that current function call. However, we would have
  * to do this four times as there are four values we need to search for and str.replace only accepts one at a time. The best solution that occurs to me
- * is to create an object that holds three key value pairs. The keys will be our target vowels, while the values will be their replacement numbers.
+ * is to create an object that holds four key value pairs. The keys will be our target vowels, while the values will be their replacement numbers.
  * Then, using the boolean operator "in", we can iterate over an array of our input letters and check if a corresponding key exists in our object.
  * If it does, then we replace that index with the value of that key value pair. This way we are only looping through a single array once, and our
  * function should be O(n)
