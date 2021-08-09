@@ -12,7 +12,7 @@
     rails new project_name -d postgresql -T
 
 4. What is the command to generate a Rails model for a meals table with columns named breakfast, lunch, and dinner?
-    rails g model Meals breakfast:string lunch:string dinner:string
+    rails g model Meal breakfast:string lunch:string dinner:string
     # Replace string with another datatype if appropriate
 
 5. What is a migration? Why would you use one?

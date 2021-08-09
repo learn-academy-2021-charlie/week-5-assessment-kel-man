@@ -125,7 +125,7 @@ describe('fullHouse', () => {
 const fullHouse = hand => {
   let storage = {}
   for(let card of hand){
-    card.toString() in storage ? storage[card.toString()] += 1 : storage[card.toString()] = 1
+    card in storage ? storage[card] += 1 : storage[card] = 1
   }
   if(Object.keys(storage).length !== 2){
     return false
