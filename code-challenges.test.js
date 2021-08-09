@@ -127,7 +127,7 @@ const fullHouse = hand => {
   for(let card of hand){
     card.toString() in storage ? storage[card.toString()] += 1 : storage[card.toString()] = 1
   }
-  if(Object.keys(storage).length > 2 || Object.keys(storage).length < 2){
+  if(Object.keys(storage).length !== 2){
     return false
   }else {
     for(let [key, value] of Object.entries(storage)){ // Could also just use for(let value in object) but I feel this is equally good
