@@ -101,12 +101,14 @@ var hand2 = [5, 5, 3, 3, 4]
 // Expected output: false
 var hand3 = [5, 5, 5, 5, 4]
 // Expected output: false
+var fiveOfAKind = [1, 1, 1, 1, 1]
 
 describe('fullHouse', () => {
   it('returns true if the hand is a full house, false if not', () => {
     expect(fullHouse(hand1)).toEqual(true)
     expect(fullHouse(hand2)).toEqual(false)
     expect(fullHouse(hand3)).toEqual(false)
+    expect(fullHouse(fiveOfAKind)).toEqual(false)
   })
 })
 
@@ -125,7 +127,7 @@ const fullHouse = hand => {
   for(let card of hand){
     card.toString() in storage ? storage[card.toString()] += 1 : storage[card.toString()] = 1
   }
-  if(Object.keys(storage).length > 2){
+  if(Object.keys(storage).length > 2 || Object.keys(storage).length < 2){
     return false
   }else {
     for(let [key, value] of Object.entries(storage)){ // Could also just use for(let value in object) but I feel this is equally good
